@@ -1,0 +1,125 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: #eae0d5; /* Light beige background similar to the magazine's page */
+    color: #333; /* Primary text color */
+}
+
+#container {
+    max-width: 750px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+#magazineImage {
+    display: block; /* Ensures the image does not inline with text */
+    max-width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Keeps the image's aspect ratio */
+    column-span: all; /* The image should span across all columns */
+    text-align: center; /* Center the image if it's smaller than the column width */
+    margin: 20px 0; /* Add some vertical space around the image */
+  }
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #cc1c4d;
+    margin: 0;
+}
+
+header p {
+    font-size: 0.75em;
+    color: #666;
+}
+
+main {
+    column-count: 2; 
+    column-gap: 20px; 
+    }
+
+main section {
+    break-inside: avoid; 
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 1.5em;
+    background-color: #00a4e4; 
+    color: #fff; 
+    margin: 10; 
+    padding: 10px 0; 
+}
+
+main section:nth-of-type(2) h2 {
+    background-color: #ed1c7f; 
+}
+
+main section:nth-of-type(3) h2 {
+    background-color: #22b14c; 
+}
+
+main ol {
+    counter-reset: section;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main ol li {
+    counter-increment: section;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+main ol li::before {
+    content: counter(section);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.25em;
+    color: #cc1c4d;
+}
+
+main ol li h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+main ol li p {
+    margin: 0;
+}
+
+aside {
+    column-span: all; 
+    padding: 5px 0;
+    border-bottom: 4px solid #cc1c4d; 
+    margin: 10px 0; 
+}
+
+aside figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside figure figcaption {
+    font-size: 0.75em;
+}
+
+footer {
+    font-size: 0.75em;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+}
